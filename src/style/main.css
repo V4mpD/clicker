@@ -1,0 +1,115 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.global-header{
+    position: fixed;
+    background-color: rgb(67, 118, 212);
+    width: 100%;
+    z-index: 9999;
+}
+
+.page-wrapper{
+    padding-top: 64px;
+}
+
+.hero {
+    height: 70vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+@keyframes pulse {
+    from {
+      box-shadow:  0 0 0 0 rgba(255,255,255,1),
+                   0 0 0 0 rgba(51,51,51,1);
+    }
+    to {
+      box-shadow:  0 0 0 0.65em rgba(255,255,255,1),
+                   0 0 0 1em rgba(51,51,51,0);
+    }
+  }
+
+.hero-action:focus{
+    animation: pulse 0.2s 1 ease-out;
+  }
+.hero-action:active{
+    animation: none;
+  }
+
+.hero-action {
+    background: rgb(34,193,195);
+    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    border: none;
+    font-size: 24px;
+    padding: 5px 48px;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+.hero-action:hover { opacity: 0.8; }
+
+.retail{ margin: 0px; padding: 0px; }
+
+@media screen and (max-width: 768px) {
+    .global-header__nav { display:none; }
+}
+
+.upgrade_list{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+.upgrade{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.user-form{
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.user-form__group{
+    margin-bottom: 15px;
+    width: 100%;
+}
+.user-form__label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.user-form__input{
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.user-form__action{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 5px 0px;
+    font-weight: bold;
+    border-radius: 4px;
+}
